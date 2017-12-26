@@ -1,7 +1,5 @@
 package node
 
-import "github.com/u238/businessprocess/node"
-
 type Node interface {
 	SetStatus(status uint8) (uint8, error)
 	EvaluateStatus() (uint8, error)
@@ -10,7 +8,7 @@ type Node interface {
 
 type CommonNode struct {
 	Status uint8
-	parents []node.Node
+	parents []Node
 }
 
 func (n *CommonNode) SetStatus(status uint8) (uint8, error) {
