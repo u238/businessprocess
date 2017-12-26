@@ -1,7 +1,7 @@
 package node
 
 type Node interface {
-	SetStatus()
+	SetStatus(status uint8) (uint8, error)
 }
 
 type CommonNode struct {
