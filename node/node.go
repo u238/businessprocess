@@ -5,12 +5,12 @@ type Node interface {
 }
 
 type CommonNode struct {
-	status uint8
+	Status uint8
 }
 
 func (n *CommonNode) SetStatus(status uint8) (uint8, error) {
-	if n.status != status {
-		n.status = status
+	if n.Status != status {
+		n.Status = status
 		return 1, nil
 	}
 	return 0, nil
