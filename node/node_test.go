@@ -2,11 +2,10 @@ package node
 
 import (
 	"testing"
-	"github.com/u238/businessprocess/node"
 )
 
 func TestCommonNode_SetStatus(t *testing.T) {
-	n := CommonNode{0,[]node.Node{}}
+	n := CommonNode{0,[]Node{}}
 
 	res, _ := n.SetStatus(0)
 	if res != uint8(0) {
@@ -20,7 +19,7 @@ func TestCommonNode_SetStatus(t *testing.T) {
 }
 
 func TestCommonNode_GetStatus(t *testing.T) {
-	n := CommonNode{0, []node.Node{}}
+	n := CommonNode{0, []Node{}}
 	s := n.GetStatus()
 	if s < 0 || s > 3 	{
 		t.Errorf("status is %v", s)
