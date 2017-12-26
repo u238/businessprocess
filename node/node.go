@@ -3,7 +3,8 @@ package node
 type Node interface {
 	SetStatus(status uint8) (uint8, error)
 	EvaluateStatus() (uint8, error)
-	GetStatus() (uint8)
+	GetStatus() uint8
+	GetChildrenStatus() []uint8
 }
 
 type CommonNode struct {
@@ -26,6 +27,9 @@ func (n *CommonNode) EvaluateStatus() (uint8, error) {
 	return n.Status, nil
 }
 
+func (n *CommonNode) GetChildrenStatus() []uint8 {
+	return nil
+}
 
 func (n *CommonNode) GetStatus() uint8 {
 	return n.Status
