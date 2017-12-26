@@ -19,7 +19,7 @@ func TestCommonNode_SetStatus(t *testing.T) {
 func TestCommonNode_GetStatus(t *testing.T) {
 	n := CommonNode{0}
 	s := n.GetStatus()
-	if s < 0 || s == nil {
+	if s < 0 || s > 3 {
 		t.Errorf("status is %v", s)
 	}
 }
