@@ -2,7 +2,6 @@ package relation
 
 import (
 	"testing"
-	"github.com/u238/businessprocess/node"
 )
 
 func TestEvaluateAnd(t *testing.T) {
