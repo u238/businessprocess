@@ -1,5 +1,5 @@
 package relation
 
 type Relation interface {
-	Evaluate()
+	Evaluate() uint8
 }
